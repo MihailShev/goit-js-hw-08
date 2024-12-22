@@ -94,14 +94,14 @@ const openModalWindow = (e) => {
 
 createGalleryItems();
 
-galleryList.addEventListener("click", (event) => {
-  if (event.target === event.currentTarget) {
+galleryList.addEventListener("click", (e) => {
+  if (e.target === e.currentTarget) {
     return;
   }
-  if (event.target.classList.contains("gallery-link")) {
-    event.preventDefault();
-  } else if (event.target.classList.contains("gallery-image")) {
-    event.preventDefault();
-    openModalWindow(event.target);
+  if (e.target.classList.contains("gallery-link")) {
+    e.preventDefault();
+  } else if (e.target.classList.contains("gallery-image")) {
+    e.preventDefault();
+    openModalWindow(e.target);
   }
 });
